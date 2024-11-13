@@ -1,0 +1,131 @@
+head,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  min-width: 815px;
+  min-height: 600px;
+}
+
+.App {
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+  background-color: rgb(10, 165, 10);
+  min-width: 815px;
+  min-height: 600px;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  z-index: 20;
+  min-width: 815px;
+}
+
+.Login,
+.Signin,
+.Login a,
+.Signin a {
+  color: white;
+}
+
+.AlertMessage {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: darkgreen 5px 5px 15px;
+}
+
+main {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  background-color: rgb(10, 165, 10);
+  position: relative;
+  top: 70px;
+  display: block;
+  overflow: auto;
+}
+
+.VacationList {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  padding: 15px;
+}
+
+.loading-img {
+  height: 50%;
+  width: 50%;
+  top: 50;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+}
+
+.card-item {
+  width: 18rem;
+}
+
+.vacataion-descr {
+  overflow: auto;
+  max-height: 5rem;
+}
+
+.admin-vctn-control-panel {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  transform: rotate(90deg);
+}
+
+.vacation-img {
+  max-width: 18rem;
+  max-height: 10rem;
+  box-shadow: dimgray 3px 3px 10px;
+}
+
+.VacationItemRaw {
+  box-shadow: darkgreen 5px 5px 15px;
+}
+
+#add-vacation {
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.VacationItemAddUpd {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  box-shadow: darkgreen 5px 5px;
+}
+
+.add-update-caption {
+  text-decoration: underline;
+}
+
+#reportChart {
+  background-color: white;
+  top: 0;
+  /* left: 50%; */
+  transform: translateX(5%);
+}
+
+.button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

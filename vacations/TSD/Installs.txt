@@ -1,0 +1,42 @@
+***** Install SERVER : *****
+npm init -y
+npm i express --save
+npm i nodemon --save-dev
+
+npm i  -S cors  mysql    bcryptjs  jsonwebtoken  express-session cookie-parser   formidable  socket.io
+
+-------------------------------------------
+
+***** Install CLIENT : *****
+
+npx create-react-app client
+npm i react-router-dom
+npm i redux react-redux
+npm i chart.js --save
+npm i socket.io-client --save
+npm i react-bootstrap bootstrap
+
+
+====================================================
+====================================================
+Deploy:
+*** Client: ***
+npm run build
+
+==> build/ created
+
+*** Client / Server ***
+Copy build/ to root of Server
+
+*** Server ***
+add  to index.js:
+---------------------------------------
+app.use(express.static("build"));
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "build/index.html");
+} )
+---------------------------------------
+*** Release: ***
+only server folder (without  node_modules)
+======================================================
