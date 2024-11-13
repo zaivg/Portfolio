@@ -1,0 +1,23 @@
+<form [formGroup]="form" (submit)="submitHandler($event)" class="cmpnt-panel">
+    <div class="row">
+        <select id="exec_id" name="exec_id" formControlName="exec_id"  class="form-field">
+            <option *ngFor="let man of arrExecuters" [value]="man.id">{{man.nickname}}</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label class="form-lbl" for="descr">To do:</label>
+        <input type="textarea" id="descr" formControlName="descr"  class="form-field" 
+            [ngClass]="{'valid': form.controls.descr.valid, 'invalid': form.controls.descr.invalid && form.controls.descr.dirty}" />
+        <h6 *ngIf="form.controls.descr.invalid && form.controls.descr.dirty" class="error-note  elemnt-left">
+            missing Description
+        </h6>
+    </div>
+    <br />
+
+    <div class="control-panel">
+        <input type="reset" class="form-control reset" value="Cancel" />
+        <input type="submit" class="form-control submit" value="Submit" [disabled]="form.invalid" />
+    </div>
+
+</form>

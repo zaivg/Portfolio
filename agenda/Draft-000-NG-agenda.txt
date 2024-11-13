@@ -1,0 +1,110 @@
+***** SERVER : *****
+cd "C:\ZZZ TEST\agenda\server"
+npx nodemon 
+    node debug index
+    node index 
+    http://localhost:3000
+-------------------------------------------
+***** CLIENT-ANGULAR : *****
+cd "C:\ZZZ TEST\agenda\client"
+ng s -o
+    http://localhost:8080
+====================================================
+family
+	id, name, nickname, role
+agendas
+	id, descr, exec_id, created_dt
+
+    http://localhost:3000
+
+// family ---------------- :
+get:
+'http://localhost:3000/family'
+
+// agendas ---------------- :
+get:
+'http://localhost:3000/agendas'
+
+
+post:
+http://localhost:3000/agendas
+{
+  "descr": "ZXCV",
+  "exec_id": 2
+}
+
+del:
+http://localhost:3000/agendas/id
+
+
+====================================================
+====================================================
+
+***** Install SERVER : *****
+cd "C:\ZZZ TEST\agenda\server"
+
+npm init -y
+npm i express --save
+    npm i nodemon --save-dev
+npm i   express-session cors  mysql    
+                bcryptjs  jsonwebtoken   uuid    pug
+
+-------------------------------------------
+
+***** Install CLIENT-ANGULAR : *****
+
+cd "C:\ZZZ TEST\agenda"
+ng new client
+
+cd "C:\ZZZ TEST\agenda\client"
+    ng add @angular/material
+        https://material.angular.io/
+
+==>> src/app/app.module.ts
+    import {SomeModule} from '@angular/xxx';
+
+ng g c components/ComponentName --skipTests
+ng g s services/ServiceName --skipTests
+    \src\app\models\item.ts --> import Item from 'src/app/models/item';
+~~~~~~~~~~~~~~~~~
+ng g c components/AddAgenda --skipTests
+ng g c components/AgendaList --skipTests
+ng g c components/AgendaItem --skipTests
+ng g c components/Alert --skipTests
+
+ng g s services/db --skipTests
+ng g s services/events --skipTests
+
+~~~~~~~~~~~~~~~~~
+
+-------------------------------------------
+1) \src\favicon.ico ==> icon
+2) \src\index.html ==> (icon) / title 
+3) \src\app\app.component.ts ==> title 
+4) \src\app\app.component.html ==> page schema: 
+<section>
+    <app-xxx> </app-xxx>
+    <router-outlet></router-outlet>
+</section> 
+-------------------------------------------
+====================================================
+====================================================
+Deploy:
+---------------------------------------
+*** Release: ***
+======================================================
+cmpnt-panel						class="cmpnt-panel"
+row										<div class="row"></div> <br/>
+    form-lbl							class="form-lbl"
+    form-field						class="form-field	"
+	form-field-value			class="form-field-value"
+elemnt-left						class="elemnt-left"
+elemnt-right						class="elemnt-right"
+elemnt-center					class="elemnt-center"
+	control-panel				class="control-panel	"
+    form-control					class="form-control	"
+
+valid									class="valid"
+invalid									class="invalid"
+error-note							class="error-note"
+======================================================

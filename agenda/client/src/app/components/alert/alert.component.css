@@ -1,0 +1,28 @@
+.alert-panel{
+    position: fixed;
+    width: 40%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    border: blue 2px outset;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: blueviolet 10px  10px  15px;
+    background-color: rgb(247, 133, 247);
+    color: white;
+    text-align: center;
+}
+
+/* .alert-message{
+
+} */
+
+.alert-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}

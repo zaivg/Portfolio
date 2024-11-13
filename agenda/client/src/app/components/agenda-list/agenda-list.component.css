@@ -1,0 +1,13 @@
+.agenda-list{
+
+    width: 90%;
+    border: blue 1px solid;
+    padding: 10px;
+    box-shadow: slateblue 3px 3px 15px;
+    margin: 10px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}

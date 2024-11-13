@@ -1,0 +1,35 @@
+.agenda-item {
+    width: 85%;
+    position: relative;
+}
+
+
+.row{
+    width: 100%;
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.form-field-value{
+    font-weight: bolder;
+    color: white;
+    text-shadow: blue 5px 5px 5px;
+}
+
+.form-field-value.elemnt-right{
+    margin-left:auto;
+}
+
+.form-field-value.elemnt-left{
+    margin-right: auto;
+}
+
+.item-btnDel{
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}

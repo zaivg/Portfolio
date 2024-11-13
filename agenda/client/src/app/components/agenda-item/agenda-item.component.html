@@ -1,0 +1,28 @@
+
+<div class="AgendaItem" *ngIf="!!agenda">
+    <div class="agenda-item cmpnt-panel">
+
+        <div class="item-fragment">
+            <div class="row">
+                <label class="form-lbl elemnt-left">Lucky:</label>
+                <label class="form-field-value elemnt-right">{{agenda.nickname}} ({{agenda.role}})</label>
+            </div>
+            
+            <div class="row">
+                <label class="form-lbl elemnt-left">To do:</label>
+                <label class="form-field-value elemnt-right">{{agenda.descr}}</label>
+            </div>
+
+        </div>
+       
+        <div class="item-fragment row">
+            <label class="form-field-value elemnt-right">{{agenda.created_dt | date:'dd/MM/yyyy'}}</label>
+        </div>
+
+        <button class="item-btnDel" (click)="deleteAgenda()">
+            <span role="img" aria-label="">❌</span>
+        </button>
+
+    </div>
+</div>
+ 

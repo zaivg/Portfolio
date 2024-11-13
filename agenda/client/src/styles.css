@@ -1,0 +1,45 @@
+html,
+body
+ {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(53, 181, 255, 0.89);
+  font-size: 1.1rem;
+}
+
+
+
+.cmpnt-panel {
+  width: 90%;
+  border: blue 1px solid;
+  padding: 10px;
+  box-shadow: slateblue 3px 3px 15px;
+  margin: 10px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.cmpnt-panel .row{
+    margin: auto;
+}
+
+.elemnt-left {
+  margin-right: 15px;
+}
+
+.form-lbl {
+  color: midnightblue;
+  text-shadow: lavender 1px 1px 1px;
+  font-weight: bold;
+}
+
+.form-field {
+  border-radius: 3px;
+}
+
+.form-control {
+  border-radius: 5px;
+}

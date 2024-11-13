@@ -1,0 +1,47 @@
+#exec_id{
+    width: 150px;
+
+}
+
+#descr{
+    width: 50%;
+}
+
+
+.form-field.invalid{
+    box-shadow: brown 5px 5px 10px;
+}
+
+.row{
+    position: relative;
+    margin-top: 10px;
+}
+
+.form-lbl{
+    margin-right: 10px;
+}
+
+
+  .error-note{
+      position: absolute;
+      left:50%;
+      bottom: -40px;
+      color: red;
+  }
+
+
+.control-panel{
+    width: 30%;
+    position: relative;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.form-control{
+    width: 100px;
+    background-color: transparent;
+}
+
+.form-control.submit{
+    margin-left: auto;
+}
