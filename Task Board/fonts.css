@@ -1,0 +1,68 @@
+/***** @font-face *****/
+
+/* Labels, Buttons, Date & Time: .labelFont  */
+@font-face {
+  font-family: "MainFont";
+  src: url(Resources/fonts/Catamaran/Catamaran-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Inputs, Note Text .textFont */
+@font-face {
+  font-family: "MainFont";
+  src: url(Resources/fonts/Catamaran/Catamaran-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Alerts ? .alertFont1 */
+@font-face {
+  font-family: "MainFont";
+  src: url(Resources/fonts/Catamaran/Catamaran-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Alerts ? .alertFont2*/
+@font-face {
+  font-family: "MainFont";
+  src: url(Resources/fonts/Catamaran/Catamaran-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* PopUp  .popupFont */
+@font-face {
+  font-family: "MainFont";
+  src: url(Resources/fonts/Catamaran/Catamaran-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/***** classes *****/
+
+/* Labels, Buttons, Date & Time */
+.labelFont {
+  font-family: "MainFont";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+/* Inputs, Note Text */
+.textFont {
+  font-family: "MainFont";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+/* Modal Messages */
+.messageFont {
+  font-family: "MainFont";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+

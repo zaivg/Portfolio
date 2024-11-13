@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Board</title>
+
+    <!--********** LINKS ********** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <!-- Local Links: -->
+    <link rel="shortcut icon" href="Resources/icons/Note1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid mx-auto d-block mt-3 title" src="Resources/images/title.png">
+            </div> <!-- col-->
+        </div> <!-- row -->
+
+        <div class="row">
+            <div class="col">
+                <!-- #messageWindow #messageText :  -->
+                <div id="messageWindow" class="modal modal-sm fade modal-dialog  messageFont" tabindex="-1"
+                    role="dialog" aria-hidden="true" data-backdrop="false" data-keyboard="true">
+                    <div class="modal-dialog modal-sm" role="document" style="padding: 0px; margin: 0px; ">
+                        <div class="modal-content">
+                            <div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                    style="width: fit-content;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> </div>
+
+                            <span class="ml-3 mr-3 pb-2">
+                                <i id="messageIcon" class="fas fa-exclamation-triangle"></i>
+                                <span id="messageText">Message</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #messageWindow #messageText -->
+            </div> <!-- col -->
+        </div> <!-- row -->
+
+        <div class="row">
+
+            <div class="col">
+                <form id="inputTaskForm" class="w-sm-50 mt-1 mb-3 pl-2 pr-2 pt-4 pb-2  mx-auto d-block" action=""
+                    method="get" enctype="text/plain">
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label text-dark labelFont" for="inputNote">Task Data:</label>
+                        <div class="col-sm-10">
+                            <textarea id="inputTaskText" name="TaskText" rows="2" placeholder="..."
+                                class="form-control bg-transparent text-dark textFont inputContol"
+                                title="Required field!"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label text-dark labelFont" for="inputDueDate">Due Date:</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="inputDueDate" name="DueDate" placeholder="dd/mm/yyyy" oldValue=""
+                                class="form-control bg-transparent text-dark textFont inputContol"
+                                title="Required field! [current day] - 31/12/2999&#10;You can edit only by erasing everything or rewriting one digit at a time.&#10;The date must be correct even during editing.">
+                        </div>
+
+                        <div class="col-sm-1"></div>
+                        <label class="col-sm-2 col-form-label text-dark labelFont" for="inputDueTime">Due Time:</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="inputDueTime" name="DueTime" placeholder="hh:mm" oldValue=""
+                                class="form-control bg-transparent text-dark textFont inputContol"
+                                title="00:00 - 23:59 or empty&#10;You can edit only by erasing everything or rewriting one digit at a time.&#10;The time must be correct even during editing.">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm d-flex justify-content-between">
+
+                            <button type="reset" id="btnReset"
+                                class="btn btn-secondary btn-sm text-white labelFont row pt-1 pb-1"><i
+                                    class="far fa-trash-alt mr-3"></i>Cancel</button>
+
+
+                            <button type="submit" id="btnSubmit"
+                                class="btn btn-primary btn-sm text-white labelFont row pt-1 pb-1"><i
+                                    class="fas fa-thumbtack mr-3"></i>Save</button>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="container-fluid">
+                    <div class="btn-group-sm btn-group-toggle" data-toggle="buttons" aria-label="View options">
+                        <label class="btn btn-primary btn-sm rdo-btn">
+                            <input type="radio" name="optView" id="optAll" value="3" autocomplete="off"
+                                onchange="RefreshNotes(this.value)"> All
+                        </label>
+                        <label class="btn btn-primary btn-sm rdo-btn active">
+                            <input type="radio" name="optView" id="optActive" value="1" autocomplete="off"
+                                onchange="RefreshNotes(this.value)" checked> Active
+                        </label>
+                        <label class="btn btn-primary btn-sm rdo-btn">
+                            <input type="radio" name="optView" id="optExecuted" value="2" autocomplete="off"
+                                onchange="RefreshNotes(this.value)"> Executed
+                        </label>
+                    </div>
+                </div> <!-- col -->
+
+            </div> <!-- col -->
+        </div> <!-- row -->
+
+    </div> <!-- container -->
+
+    <div id="noteShelf" class="d-inline-flex flex-wrap">
+    </div> <!-- row  #noteShelf -->
+
+    <!--********** SCRIPTS ********** -->
+    <!-- of Bootstrap: -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Local scripts: -->
+    <script src="objects.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

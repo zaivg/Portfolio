@@ -1,0 +1,96 @@
+html,
+body {
+  width: vw;
+  height: vh;
+  margin: 0;
+}
+
+body {
+  background-color: burlywood;
+  background-image: url("Resources/images/tile.jpg");
+}
+
+/*** Input Task Form : ***/
+#inputTaskForm {
+  background-color: whitesmoke;
+  background-size: contain;
+  background-image: url("Resources/images/formbg.jpg");
+  box-shadow: 10px 10px 20px rgb(75, 24, 24);
+}
+
+.inputContol {
+  border: 10px black double;
+}
+
+.inputContol.inputWrong {
+  border: 10px fuchsia double
+}
+
+textarea {
+  resize: none;
+}
+
+button, .rdo-btn {
+  width: 140px;
+}
+
+#messageWindow {
+  position: absolute;
+  height: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px splid black;
+}
+
+#messageIcon {
+  color: tomato;
+}
+/*** Input Task Form ***/
+
+/*** Note: ***/
+.note {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  padding: 20px 10px;
+  background-image: url("Resources/images/notebg.png");
+  background-repeat: no-repeat;
+  background-size: 220px 250px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 0.5s linear; /*.visible -> .hidden*/
+  animation: 0.5s ease-out 0s 3 normal none running kfFallingLeaf;
+}
+@keyframes kfFallingLeaf {
+  from { transform: translateY(0px) rotate(0deg); }
+  to { transform: translateY(300px) rotate(360deg); }
+}
+
+.visible {
+  opacity: 1;
+  transition: all 0.5s linear; /*.hidden -> .visible*/
+}
+
+.btn-close-note {
+  width: fit-content;
+  display: none;
+}
+
+.note:hover .btn-close-note {
+  display: inline-block;
+}
+
+.note-text {
+  height: 135px;
+  margin-top: 25px;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.note-date,
+.note-time {
+  padding-left: 5px;
+}
+/*** Note ***/
