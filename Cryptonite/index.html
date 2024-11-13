@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cryptonite</title>
+    <link rel="shortcut icon" href="Resources/Kryptonite.png" type="image/x-icon">
+    <!--********** LINKS ********** -->
+    <!-- link to Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- link to chart: -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <!--===== links of the page =====-->
+    <link rel="stylesheet" href="index.css">
+    <script src="globals.js"></script>
+</head>
+
+<body class="parallax1">
+    <img id="imgSuperman" src="Resources/Superman.png">
+
+    <header class="container-fluid">
+        <div class="row">
+            <div class="headerSegment jumbotron jumbotron-fluid m-0 pt-0 pb-2 pt-md-2 pb-md-3 pl-1 border-bottom border-dark w-100 rounded">
+                <div class="container m-0">
+                    <h1 class="display-4 m-0">Cryptonite</h1>
+                    <div id="brdrKryptonite" class="border-bottom border-left border-dark rounded-bottom"></div>
+                    <img id="imgKryptonite" class="rounded-bottom" src="Resources/Kryptonite - w.png">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="headerSegment container mt-1 mb-1 mt-md-3 mb-md-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a id="navHome" class="nav-link nav-control" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navReports" class="nav-link nav-control" href="#">Live Reports</a>
+                    </li>
+                    <li class="nav-item mr-auto">
+                        <a id="navAbout" class="nav-link nav-control" href="#">About</a>
+                    </li>
+                    <form id="frmSearch" class="form-inline mt-1 mb-1">
+                        <input type="search" id="inputSearch" class="form-control nav-control mr-0 mr-sm-2"
+                            placeholder="Search" aria-label="Search">
+                        <button type="button" id="navSearch" class="btn btn-outline-success nav-control "
+                            >Search</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="parallax1">
+        <div id="container-shelfInfo" class="container container-fluid">
+            <div id="shelfInfoConst" class="shelfInfo d-inline-flex flex-wrap justify-content-center w-100 h-100 pt-3 pb-3">
+            </div>
+            <div id="shelfInfoTemp" class="shelfInfo d-inline-flex flex-wrap justify-content-center w-100 h-100 pt-3 pb-3">
+            </div>
+        </div>
+    </main>
+    <div class="parallax2"></div>
+
+
+    <!--********** SCRIPTS ********** -->
+    <!-- links to Boostrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--===== links of the page =====-->
+    <script src="index.js"></script>
+    <script src="home.js"></script>
+    <script src="report.js"></script>
+    <script src="about.js"></script>
+</body>
+
+</html>

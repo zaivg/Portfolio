@@ -1,0 +1,14 @@
+﻿TS
+/// <reference path="Cryptonite.d.ts" />
+export {};
+
+cd 'd:\Study\Full Stack\PROJECTS @ Full Stack\Test Projects\Current Project\Cryptonite'
+
+tsc 'globals' -w -t ES6
+tsc 'index' -w -t ES6
+tsc 'home' -w -t ES6
+tsc 'report' -w -t ES6
+tsc 'about' -w -t ES6
+
+tsc 'Cryptonite.d.ts' -w -t ES6
+
